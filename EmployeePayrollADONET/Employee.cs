@@ -4,10 +4,9 @@ using System.Text;
 
 namespace EmployeePayrollADONET
 {
-    public class Employee
+    class Employee
     {
-        public int EmpId { get; set; }
-        public string EmpName { get; set; }
+        public string EmpName {get; set; }
         public string Gender { get; set; }
         public string Phone { get; set; }
         public string EmpAddress { get; set; }
