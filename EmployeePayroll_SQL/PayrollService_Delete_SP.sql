@@ -1,12 +1,11 @@
-Create or alter procedure spUpdateBasicPay
+Create or alter procedure spDeleteEmployeeDetails
 (  
-   @EmpName varchar(20),
-   @NetPay float
+   @EmpId int  
 )  
 as
 begin try
-UPDATE EmployeePayrollTable set BasicPay=30000,NetPay=@NetPay where EmpName=@EmpName;
-End Try
+Delete from EmployeePayrollTable where Id=@EmpId
+ End Try
 BEGIN CATCH
   SELECT
     ERROR_NUMBER() AS ErrorNumber,

@@ -1,11 +1,7 @@
-Create or alter procedure spUpdateBasicPay
-(  
-   @EmpName varchar(20),
-   @NetPay float
-)  
+Create or alter procedure spGetAllEmployeeDetails
 as
 begin try
-UPDATE EmployeePayrollTable set BasicPay=30000,NetPay=@NetPay where EmpName=@EmpName;
+select * from EmployeePayrollTable
 End Try
 BEGIN CATCH
   SELECT
